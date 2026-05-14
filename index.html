@@ -1,197 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapil Bhadre | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapil Bhadre | Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<script src="script.js" defer></script>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="header">
-    <h2 class="logo">Kapil Bhadre</h2>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- Navbar -->
+<header id="header">
+  <div class="logo">Kapil</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="darkToggle">🌙</button>
 </header>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
-    <div class="hero-text">
-        <h1>Hello, I'm <span>Kapil Bhadre</span></h1>
-        <h3>Senior Data Analyst | SAS | Risk Analytics</h3>
-        <p>
-            9+ years of experience in banking, SAS programming, and business intelligence.
-            Specialized in regulatory reporting, dashboards, and data automation.
-        </p>
+<!-- Hero -->
+<section id="home" class="hero fade">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Kapil Bhadre</span></h1>
+    <h3 id="typing"></h3>
 
-        <a href="KAPIL BHADRE_Resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-
-    <div class="hero-img">
-        <img src="profile.jpg" alt="Kapil Bhadre">
-    </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section">
-    <h2>About Me</h2>
     <p>
-        I am a Senior Data Analyst with extensive experience in SAS, SQL, and banking risk analytics.
-        I specialize in building scalable reporting solutions, automating workflows, and developing 
-        business intelligence dashboards for senior management and regulatory requirements.
+      Senior Data Analyst with 9+ years of expertise in SAS, Risk Analytics, 
+      Regulatory Reporting, and Banking Intelligence.
     </p>
+
+    <div class="btn-group">
+      <a href="KAPIL BHADRE_Resume.pdf" class="btn">Download Resume</a>
+      <a href="#contact" class="btn-outline">Hire Me</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Kapil Bhadre">
+  </div>
 </section>
 
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="section">
-    <h2>Skills</h2>
-
-    <div class="skill">
-        <p>SAS / SAS Viya</p>
-        <div class="bar"><div style="width:95%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>SQL</p>
-        <div class="bar"><div style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Excel (VBA)</p>
-        <div class="bar"><div style="width:85%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Power BI</p>
-        <div class="bar"><div style="width:75%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Python</p>
-        <div class="bar"><div style="width:70%"></div></div>
-    </div>
-
+<!-- About -->
+<section id="about" class="section fade">
+  <h2>About Me</h2>
+  <p>
+    I am a Senior Data Analyst specialized in SAS programming, SQL, and BI reporting.
+    I have built dashboards, automated RBI reports, and created data marts to improve decision-making.
+  </p>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="section">
-    <h2>Experience</h2>
+<!-- Skills -->
+<section id="skills" class="section fade">
+  <h2>Skills</h2>
 
-    <div class="experience-item">
-        <h3>Aditya Birla Capital Ltd</h3>
-        <span>Senior Analyst | Aug 2019 – Present</span>
-        <p>
-            Managing regulatory reporting (RBI, XBRL), building dashboards, generating CIBIL triggers,
-            and developing data marts to improve data quality and analytics.
-        </p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Citi Bank</h3>
-        <span>Assistant Manager | Sep 2017 – Aug 2019</span>
-        <p>
-            Developed campaign analytics, segmentation logic, and personalized customer targeting strategies.
-        </p>
-    </div>
-
-    <div class="experience-item">
-        <h3>Standard Chartered Bank</h3>
-        <span>Senior Analyst | Jun 2016 – Sep 2017</span>
-        <p>
-            Created collections MIS reports, dashboards, and risk performance analytics.
-        </p>
-    </div>
-
-    <div class="experience-item">
-        <h3>TCS</h3>
-        <span>Statistical Programmer | Apr 2015 – Jun 2016</span>
-        <p>
-            Developed SAS programs for clinical trials, ensuring data quality and compliance.
-        </p>
-    </div>
+  <div class="skill"><span>SAS / Viya</span><div class="bar"><div data-skill="95"></div></div></div>
+  <div class="skill"><span>SQL</span><div class="bar"><div data-skill="90"></div></div></div>
+  <div class="skill"><span>Excel VBA</span><div class="bar"><div data-skill="85"></div></div></div>
+  <div class="skill"><span>Power BI</span><div class="bar"><div data-skill="75"></div></div></div>
+  <div class="skill"><span>Python</span><div class="bar"><div data-skill="70"></div></div></div>
 
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
+<!-- Experience -->
+<section id="experience" class="section fade">
+  <h2>Experience</h2>
 
-    <div class="project">
-        <h3>Retail Risk Dashboard</h3>
-        <p>Dashboard to track retail portfolio growth and performance.</p>
-        <span>Tools: SAS, SQL, Excel</span>
+  <div class="timeline">
+
+    <div class="card">
+      <h3>Aditya Birla Capital</h3>
+      <p>Senior Analyst (2019–Present)</p>
+      <p>RBI reports, dashboards, automation, data marts.</p>
     </div>
 
-    <div class="project">
-        <h3>CIBIL Trigger Lead System</h3>
-        <p>Automated customer lead generation system.</p>
-        <span>Tools: SAS, Data Analytics</span>
+    <div class="card">
+      <h3>Citi Bank</h3>
+      <p>Assistant Manager (2017–2019)</p>
+      <p>Campaign analytics & segmentation.</p>
     </div>
 
-    <div class="project">
-        <h3>RBI Sectoral Reporting</h3>
-        <p>Automated regulatory reporting for NBFC compliance.</p>
-        <span>Tools: SAS, SQL</span>
+    <div class="card">
+      <h3>Standard Chartered</h3>
+      <p>Senior Analyst (2016–2017)</p>
+      <p>Risk MIS and collections reporting.</p>
     </div>
 
+  </div>
 </section>
 
-<!-- ===== EDUCATION ===== -->
-<section id="education" class="section">
-    <h2>Education</h2>
+<!-- Projects -->
+<section id="projects" class="section fade">
+  <h2>Projects</h2>
 
-    <p><b>M.Sc. Statistics</b> – S.R.T.M University (2014)</p>
-    <p><b>B.Sc. Mathematics, Statistics & Computer Science</b></p>
+  <div class="grid">
+
+    <div class="project-card">
+      <h3>Retail Risk Dashboard</h3>
+      <p>Portfolio tracking dashboard for business insights</p>
+    </div>
+
+    <div class="project-card">
+      <h3>CIBIL Trigger System</h3>
+      <p>Automated lead generation system</p>
+    </div>
+
+    <div class="project-card">
+      <h3>RBI Reporting</h3>
+      <p>Automated sector classification reporting</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Education -->
+<section class="section fade">
+  <h2>Education</h2>
+  <p>M.Sc. Statistics – SRTM University</p>
+  <p>B.Sc. Mathematics, Statistics & CS</p>
+</section>
+
+<!-- Certifications -->
+<section class="section fade">
+  <h2>Certifications</h2>
+  <ul>
+    <li>SAS Advanced Programmer</li>
+    <li>SAS Base Programmer</li>
+    <li>SAS Viya Certification</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section fade">
+  <h2>Contact</h2>
+
+  <p><i class="fas fa-envelope"></i> kapil.sas9@gmail.com</p>
+  <p><i class="fas fa-phone"></i> +91 8149717453</p>
+
+  <div class="socials">
+    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-github"></i>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Send</button>
+  </form>
 
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
-<section id="certifications" class="section">
-    <h2>Certifications</h2>
-
-    <ul>
-        <li>SAS Certified Advanced Programmer</li>
-        <li>SAS Certified Base Programmer</li>
-        <li>SAS Viya Certification (Coursera)</li>
-    </ul>
-
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
-
-    <p>Email: kapil.sas9@gmail.com</p>
-    <p>Phone: +91-8149717453</p>
-    <p>Location: Mumbai, India</p>
-
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
-
-</section>
-
-<!-- ===== FOOTER ===== -->
 <footer>
-    <p>© 2026 Kapil Bhadre | Portfolio</p>
+  <p>© 2026 Kapil Bhadre</p>
 </footer>
 
 </body>

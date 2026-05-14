@@ -1,0 +1,105 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: white;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.spinner {
+  border: 5px solid grey;
+  border-top: 5px solid cyan;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { 100% { transform:rotate(360deg);} }
+
+/* Navbar */
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 50px;
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav a { margin:10px; color:white; text-decoration:none; }
+
+/* Hero */
+.hero {
+  display:flex;
+  height:90vh;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.hero-img img {
+  width:260px;
+  border-radius:50%;
+  box-shadow:0 0 30px cyan;
+  animation: float 4s infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px);}
+}
+
+/* Glassmorphism */
+.card, .project-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding:20px;
+  border-radius:15px;
+  transition:.3s;
+}
+
+.project-card:hover { transform:scale(1.08); }
+
+/* Skills */
+.bar {
+  background:#444;
+  height:8px;
+}
+.bar div {
+  height:100%;
+  background: cyan;
+  width:0;
+  transition:1s;
+}
+
+/* Sections */
+.section {
+  padding:60px;
+}
+
+/* Buttons */
+.btn {
+  background:cyan;
+  padding:10px 20px;
+  color:black;
+  text-decoration:none;
+  border-radius:20px;
+}
+
+.btn-outline {
+  border:1px solid white;
+  padding:10px;
+  color:white;
+}
+
+/* Fade animation */
+.fade { opacity:0; transform:translateY(20px); transition:.6s; }
+.fade.show { opacity:1; transform:translateY(0); }
